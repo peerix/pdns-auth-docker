@@ -23,3 +23,4 @@ docker run -d \
         peerix/pdns-auth
 
 ```
+# PDNS auth container
