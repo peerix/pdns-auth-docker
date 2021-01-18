@@ -1,10 +1,10 @@
 FROM debian:latest
 MAINTAINER "atanas argirov" <atanas@argirov.org>
 
-# install gnupg2 & curl
-RUN apt update && apt install -y gnupg2 curl 
-# add powerdns repo
+# install gnupg2, curl & sqlite3
+RUN apt update && apt install -y gnupg2 curl sqlite3
 
+# add powerdns repo
 COPY apt.pdns.repo /etc/apt/sources.list.d/pdns.list
 COPY apt.pdns.pref /etc/apt/preferences.d/pdns 
 RUN curl https://repo.powerdns.com/CBC8B383-pub.asc | apt-key add -  
