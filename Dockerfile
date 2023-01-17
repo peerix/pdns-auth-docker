@@ -13,8 +13,8 @@ RUN apt update && apt install --no-install-recommends -y pdns-server pdns-backen
 
 EXPOSE 53/tcp 53/udp
 
-#COPY pdns.conf.tmpl /etc/powerdns/pdns.conf.tmpl
-#COPY docker-entrypoint.sh /
+COPY pdns.conf.tmpl /etc/powerdns/pdns.conf.tmpl
+COPY docker-entrypoint.sh /
 
 ENTRYPOINT [ "/docker-entrypoint.sh" ]
 
