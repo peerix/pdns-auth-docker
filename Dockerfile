@@ -19,5 +19,4 @@ COPY docker-entrypoint.sh /
 
 ENTRYPOINT [ "/docker-entrypoint.sh" ]
 
-#ENTRYPOINT [ "/usr/sbin/pdns_server" ]
-CMD [ "--config-dir=/etc/powerdns","--guardian=no", "--daemon=no", "--disable-syslog", "--log-timestamp=no", "--write-pid=no" ]
+CMD [ "/usr/sbin/pdns_server", "--config-dir=/etc/powerdns","--guardian=no", "--daemon=no", "--disable-syslog", "--log-timestamp=no", "--write-pid=no" ]
