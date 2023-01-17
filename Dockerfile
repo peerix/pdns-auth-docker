@@ -2,7 +2,7 @@ FROM debian:latest
 MAINTAINER "atanas argirov" <atanas@argirov.org>
 
 # install gnupg2, curl & sqlite3
-RUN apt update && apt install -y gnupg2 curl sqlite3 python-pip
+RUN apt update && apt install -y gnupg2 curl sqlite3 python3-pip
 
 # add powerdns repo
 COPY apt.pdns.repo /etc/apt/sources.list.d/pdns.list
