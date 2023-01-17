@@ -16,7 +16,7 @@ EXPOSE 53/tcp 53/udp
 #COPY pdns.conf.tmpl /etc/powerdns/pdns.conf.tmpl
 #COPY docker-entrypoint.sh /
 
-#ENTRYPOINT [ "/docker-entrypoint.sh" ]
+ENTRYPOINT [ "/docker-entrypoint.sh" ]
 
-ENTRYPOINT [ "/usr/sbin/pdns_server" ]
+#ENTRYPOINT [ "/usr/sbin/pdns_server" ]
 CMD [ "--config-dir=/etc/powerdns","--guardian=no", "--daemon=no", "--disable-syslog", "--log-timestamp=no", "--write-pid=no" ]
